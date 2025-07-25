@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "get-user-by-id 4ce29da2-8ea4-42b1-a4fb-db541545f2c1"
+    }
+  }
+}

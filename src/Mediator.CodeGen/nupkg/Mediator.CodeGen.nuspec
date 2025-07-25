@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>Mediator.CodeGen</id>
+		<version>1.0.12</version>
+		<authors>Nathan Sickle</authors>
+		<owners>Nathan Sickle</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/njs41823/Mediator.CodeGen</projectUrl>
+		<repository type="git" url="https://github.com/njs41823/Mediator.CodeGen.git" />
+		<readme>README.md</readme>
+		<description>A simple, unsophisticated Microsoft.Extensions.DependencyInjection-ready Mediator implementation using code generation.</description>
+		<tags>source-generator roslyn mediator codegen dependency-injection microsoft-di ms-di microsoft.extensions.dependencyinjection</tags>
+
+		<dependencies>
+			<group targetFramework="netstandard2.0">
+				<dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="[8.0.0,)" />
+			</group>
+		</dependencies>
+	</metadata>
+
+	<files>
+		<!-- Analyzer DLL and PDB -->
+		<file src="..\bin\Release\netstandard2.0\Mediator.CodeGen.dll" target="analyzers\dotnet\cs\" />
+		<file src="..\bin\Release\netstandard2.0\Mediator.CodeGen.pdb" target="analyzers\dotnet\cs\" />
+
+		<!-- Public types for consumer use -->
+		<file src="..\bin\Release\netstandard2.0\Mediator.CodeGen.dll" target="lib\netstandard2.0\" />
+		<file src="..\bin\Release\netstandard2.0\Mediator.CodeGen.pdb" target="lib\netstandard2.0\" />
+
+		<!-- README -->
+		<file src="..\..\..\README.md" target="" />
+	</files>
+</package>

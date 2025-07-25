@@ -72,6 +72,7 @@ namespace Mediator.CodeGen.Generators.SourceTextGenerators
 
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.Extensions.DependencyInjection;
 using Mediator.CodeGen.Contracts;
 
 namespace Mediator.CodeGen.Implementation
@@ -96,7 +97,7 @@ namespace Mediator.CodeGen.Implementation
                 throw new InvalidCastException();
             }
 
-            var requestHandler = serviceProvider.GetRequiredService<TRequestHandler>();
+            var requestHandler = serviceProvider.GetRequiredService<TRequestHandler>()!;
 
             return requestHandler.Handle(typedRequest, cancellationToken);
         }

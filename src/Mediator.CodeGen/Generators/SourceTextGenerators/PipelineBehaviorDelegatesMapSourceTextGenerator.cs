@@ -69,6 +69,7 @@ using System;
 using System.Threading;
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.Extensions.DependencyInjection;
 using Mediator.CodeGen.Contracts;
 
 namespace Mediator.CodeGen.Implementation
@@ -98,7 +99,7 @@ namespace Mediator.CodeGen.Implementation
                 throw new InvalidCastException();
             }
 
-            var pipelineBehavior = serviceProvider.GetRequiredService<TPipelineBehavior>();
+            var pipelineBehavior = serviceProvider.GetRequiredService<TPipelineBehavior>()!;
 
             return pipelineBehavior.Handle(typedRequest, pipelineBehaviorNextDelegate, cancellationToken);
         }

@@ -1,4 +1,3 @@
-using FluentValidation;
 using Mediator.CodeGen.Contracts;
 using Mediator.CodeGen.DependencyInjection;
 using Microsoft.AspNetCore.Mvc;
@@ -25,10 +24,6 @@ namespace Web
             });
 
             builder.Services.AddMemoryCache();
-
-            builder.Services.AddValidatorsFromAssembly(
-                AssemblyReference.Assembly,
-                includeInternalTypes: true);
 
             builder.Services.AddAuthorization();
 
