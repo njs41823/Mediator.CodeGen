@@ -1,23 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>Mediator.CodeGen</AssemblyName>
-    <Version>1.0.3</Version>
-    <Authors>Nathan Sickle</Authors>
-    <PackageId>Mediator.CodeGen</PackageId>
-	<Description>A simple Mediator implementation using code generation.</Description>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <IncludeBuildOutput>true</IncludeBuildOutput>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
-	<PackageTags>sourcegenerator;analyzer</PackageTags>
-	  
 	<LangVersion>latest</LangVersion>
 	<IsRoslynAnalyzer>true</IsRoslynAnalyzer>
 	<IsRoslynComponent>true</IsRoslynComponent>
 	<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+	<Version>1.0.5</Version>
+	<Authors>Nathan Sickle</Authors>
+	<PackageId>Mediator.CodeGen</PackageId>
+	<Description>A simple Mediator implementation using code generation.</Description>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<IncludeBuildOutput>true</IncludeBuildOutput>
+	<PackageOutputPath>./nupkg</PackageOutputPath>
+	<PackageTags>sourcegenerator;analyzer</PackageTags>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+	<PropertyGroup>
+	<RepositoryUrl>https://github.com/njs41823/Mediator.CodeGen</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
   </PropertyGroup>
 
   <ItemGroup>
