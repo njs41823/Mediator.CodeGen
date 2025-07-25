@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Mediator.CodeGen": {
+      "commandName": "Project"
+    },
+    "Mediator.CodeGen.Web": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\Web\\Web.csproj"
+    }
+  }
+}

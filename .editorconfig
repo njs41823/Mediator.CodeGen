@@ -1,0 +1,14 @@
+# Top-most EditorConfig file
+root = true
+
+# Applies to all C# files
+[*.cs]
+
+# Enable analyzer MC001 and treat it as an error
+dotnet_diagnostic.MC001.severity = error
+
+# Optional: treat all warnings as errors
+# dotnet_analyzer_diagnostic.severity = error
+
+# Optional: enable nullable reference types
+dotnet_enable_nullable_context = true

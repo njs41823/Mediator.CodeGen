@@ -1,0 +1,16 @@
+@Web_HostAddress = https://localhost:5028
+
+GET {{Web_HostAddress}}/getRandomNumber?minValue=0&maxValue=100
+Accept: application/json
+
+###
+
+GET {{Web_HostAddress}}/getGuid
+Accept: application/json
+
+###
+
+GET {{Web_HostAddress}}/failAtRandom?failureProbability=0.5
+Accept: application/json
+
+###
